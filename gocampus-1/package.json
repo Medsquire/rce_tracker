@@ -1,12 +1,27 @@
 {
   "name": "gocampus-bus-tracker",
   "version": "1.0.0",
-  "description": "Student Bus Tracker Mobile Web Application",
-  "main": "server.js",
+  "description": "React student bus tracker for Ramachandra College of Engineering",
+  "type": "module",
+  "main": "src/main.jsx",
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
   "scripts": {
-    "start": "node server.js",
-    "dev": "node server.js",
-    "serve": "node server.js"
+    "start": "vite --host 0.0.0.0",
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "serve": "vite preview --host 0.0.0.0"
+  },
+  "dependencies": {
+    "leaflet": "^1.9.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.1.2",
+    "vite": "^8.3.3"
   },
   "keywords": [
     "bus-tracker",

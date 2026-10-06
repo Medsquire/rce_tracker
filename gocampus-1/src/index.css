@@ -1,0 +1,226 @@
+@import 'leaflet/dist/leaflet.css';
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.app-viewport-container,
+.mobile-device-frame,
+.device-screen-inner,
+.screens-viewport,
+.app-screen {
+  min-width: 0;
+}
+
+.app-screen:not(.active) {
+  display: none !important;
+}
+
+.app-screen.active {
+  display: block;
+}
+
+.header-btn-spacer {
+  display: block;
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+}
+
+.drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-light);
+  color: var(--text-main);
+}
+
+#screen-home.app-screen.active,
+#screen-route-details.app-screen.active,
+#screen-profile.app-screen.active,
+#screen-bus-details.app-screen.active,
+#screen-trips.app-screen.active,
+#screen-settings.app-screen.active {
+  display: block !important;
+}
+
+.tracking-screen-content {
+  position: relative;
+  height: min(72vh, 680px);
+  min-height: 480px;
+}
+
+.react-leaflet-map {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.tracking-search-bar {
+  position: relative;
+  z-index: 10;
+}
+
+.tracking-bus-bar {
+  position: relative;
+  z-index: 10;
+}
+
+.map-controls-group,
+.map-layer-selector,
+.map-legend-strip {
+  z-index: 500;
+}
+
+.tracking-float-card {
+  z-index: 500;
+  cursor: pointer;
+}
+
+.tracking-location-search {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+}
+
+.leaflet-container {
+  font: inherit;
+}
+
+.route-details-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin: 16px 0;
+}
+
+.route-details-stat {
+  padding: 12px 8px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.route-details-stat strong,
+.route-details-stat span {
+  display: block;
+}
+
+.route-details-stat strong {
+  color: var(--text-main);
+  font-size: 1.05rem;
+}
+
+.route-details-stat span {
+  color: var(--text-muted);
+  font-size: 0.72rem;
+}
+
+.route-stop-list,
+.trip-list,
+.settings-list-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.route-stop-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  background: var(--bg-card);
+}
+
+.route-stop-number {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--primary-light);
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.route-stop-copy {
+  flex: 1;
+  min-width: 0;
+}
+
+.route-stop-copy strong,
+.route-stop-copy span {
+  display: block;
+}
+
+.route-stop-copy strong {
+  font-size: 0.86rem;
+}
+
+.route-stop-copy span {
+  color: var(--text-muted);
+  font-size: 0.74rem;
+}
+
+.trip-card-item {
+  cursor: default;
+}
+
+.settings-item-card {
+  cursor: pointer;
+}
+
+.screen-content-padding {
+  padding: 16px;
+}
+
+.screen-description {
+  margin: 12px 16px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.bus-route-card {
+  cursor: pointer;
+}
+
+.drawer-link-btn,
+.settings-action {
+  cursor: pointer;
+}
+
+.map-search-results {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  overflow: hidden;
+  border-radius: 0 0 12px 12px;
+  background: white;
+  box-shadow: var(--shadow-md);
+}
+
+.map-search-result {
+  display: block;
+  width: 100%;
+  padding: 10px 14px;
+  border: 0;
+  border-top: 1px solid var(--border-light);
+  background: white;
+  color: var(--text-main);
+  text-align: left;
+  cursor: pointer;
+}
+
+.screen-empty-state {
+  padding: 28px 16px;
+  color: var(--text-secondary);
+  text-align: center;
+}
